@@ -1,20 +1,30 @@
+/**
+ * 
+ */
 package br.ufrn.imd.psi.q4;
 
 import java.awt.Image;
+import java.io.Serializable;
 
 /**
  * @author Hamurabi Araújo
  *
  */
-public class Candidate {
-		private String name;
-		private int number;
-		private Image image;
-		
+public class Candidate implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String name;
+	private int number;
+	private Image image;
+	private int votes;
+	
 	public Candidate(String name, int number, Image image) {
 		this.name = name;
 		this.number = number;
 		this.image = image;
+		this.setVotes(0);
 	}
 
 	/**
@@ -58,7 +68,26 @@ public class Candidate {
 	public Image getImage() {
 		return image;
 	}
-	
-	
 
+	/**
+	 * @return the votes
+	 */
+	public int getVotes() {
+		return votes;
+	}
+
+	/**
+	 * @param votes the votes to set
+	 */
+	public void setVotes(int votes) {
+		this.votes = votes;
+	}
+	
+	/**
+	 * @see increase the number of votes
+	 * @return the number of votes updated
+	 */
+	public int increase() {
+		return this.votes++;
+	}
 }
