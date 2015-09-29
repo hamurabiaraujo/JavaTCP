@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * @author Hamurabi Araújo
+ * @author Hamurabi Araï¿½jo
  *
  */
 public class Voting implements Serializable{
@@ -39,7 +39,7 @@ public class Voting implements Serializable{
 		ArrayList<String> listOfCandidates = new ArrayList<>();
 		
 		for (Candidate candidate : candidates) {
-			listOfCandidates.add("Nome: " + candidate.getName() + "\n" + "Número: " + candidate.getNumber() + "\n\n");
+			listOfCandidates.add("Nome: " + candidate.getName() + "\n" + "Nï¿½mero: " + candidate.getNumber() + "\n\n");
 		}
 		
 		return listOfCandidates;
@@ -54,6 +54,10 @@ public class Voting implements Serializable{
 		
 		while (it.hasNext()) {
 			candidate = it.next();
+			if (candidate.getNumber() == number) {
+				candidate.increaseVote();
+				break;
+			}
 		}
 	}
 }

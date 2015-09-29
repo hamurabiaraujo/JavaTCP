@@ -10,7 +10,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * @author Hamurabi Araújo
+ * @author Hamurabi Araï¿½jo
  *
  */
 public class Server {
@@ -21,14 +21,13 @@ public class Server {
 	 */
 	public static void main(String[] args) throws IOException {
 		ServerSocket serverSocket = new ServerSocket(54321);
-		System.out.println("Servidor em execução...");
+		System.out.println("Servidor em execuï¿½ï¿½o...");
 		Socket socket; 
 		String message = "";
 	
 		socket = serverSocket.accept();
 		
 		do {
-			
 			System.out.println("Cliente " + socket.getInetAddress().getHostAddress() + " conectado ...");
 			do {
 				BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));

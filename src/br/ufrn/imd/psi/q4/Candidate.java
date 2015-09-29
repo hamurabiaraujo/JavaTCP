@@ -7,7 +7,7 @@ import java.awt.Image;
 import java.io.Serializable;
 
 /**
- * @author Hamurabi Araújo
+ * @author Hamurabi Araï¿½jo
  *
  */
 public class Candidate implements Serializable{
@@ -24,7 +24,7 @@ public class Candidate implements Serializable{
 		this.name = name;
 		this.number = number;
 		this.image = image;
-		this.setVotes(0);
+		this.votes = 0;
 	}
 
 	/**
@@ -87,7 +87,7 @@ public class Candidate implements Serializable{
 	 * @see increase the number of votes
 	 * @return the number of votes updated
 	 */
-	public int increase() {
+	public int increaseVote() {
 		return this.votes++;
 	}
 }
