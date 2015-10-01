@@ -7,7 +7,7 @@ import java.awt.Image;
 import java.io.Serializable;
 
 /**
- * @author Hamurabi Araï¿½jo
+ * @author Hamurabi Araújo
  *
  */
 public class Candidate implements Serializable{

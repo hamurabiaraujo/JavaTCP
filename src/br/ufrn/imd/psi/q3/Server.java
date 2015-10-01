@@ -10,7 +10,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * @author Hamurabi Araï¿½jo
+ * @author Hamurabi Araújo
  *
  */
 public class Server {
@@ -21,7 +21,7 @@ public class Server {
 	 */
 	public static void main(String[] args) throws IOException {
 		ServerSocket serverSocket = new ServerSocket(54321);
-		System.out.println("Servidor em execuï¿½ï¿½o...");
+		System.out.println("Servidor em execução...");
 		Socket socket; 
 		String message = "";
 	
