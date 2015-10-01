@@ -3,8 +3,9 @@
  */
 package br.ufrn.imd.psi.q4;
 
-import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.Serializable;
+import java.nio.Buffer;
 
 /**
  * @author Hamurabi Araújo
@@ -17,10 +18,10 @@ public class Candidate implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private int number;
-	private Image image;
+	private BufferedImage image;
 	private int votes;
 	
-	public Candidate(String name, int number, Image image) {
+	public Candidate(String name, int number, BufferedImage image) {
 		this.name = name;
 		this.number = number;
 		this.image = image;
@@ -44,7 +45,7 @@ public class Candidate implements Serializable{
 	/**
 	 * @param image the image to set
 	 */
-	public void setImage(Image image) {
+	public void setImage(BufferedImage image) {
 		this.image = image;
 	}
 
@@ -65,7 +66,7 @@ public class Candidate implements Serializable{
 	/**
 	 * @return the image
 	 */
-	public Image getImage() {
+	public BufferedImage getImage() {
 		return image;
 	}
 
