@@ -24,10 +24,20 @@ public class Client {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		Socket socket = new Socket("localhost", 54321);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		String message = "";
-		
-		PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+		int qttOfCandidates = Integer.parseInt(reader.readLine());
 
+		PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+		
+		readListOfCandidates(socket, qttOfCandidates);
+	}
+	
+	public static void readListOfCandidates(Socket socket, int listSize) throws IOException {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+		
+		while (listSize >= 0){ 
+			System.out.println(reader.readLine());
+			listSize--;
+		}
 	}
 
 }
